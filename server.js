@@ -2,9 +2,10 @@
 const express = require("express") //importing express package
 const app = express() // creates a express application
 const data = require ('./data')
+const dotenv = require('dotenv').config()
 
 
-
+console.log(process.env.ZAID_MESSAGE)
 
 app.get('/',(req,res)=>{
 res.render('./homepage.ejs')
