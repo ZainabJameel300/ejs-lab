@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturants Details Page</title>
+</head>
+<body>
+    <h1>Resturant Details</h1>
+    <h3>Resturant Name: <%= data.name %> </h3>
+    <h3>Resturant Adress: <%= data.address %> </h3>
+    <h3><%= data.name %>  <% if(data.isOpen=== true) {%>   - is Open   <%}%></h3>%>
+    <h3>Phone Number: <%= data.phone %></h3>
+
+    <h3>Menu :</h3>
+    <ol>
+    <% for(let i=0 ; i<data.menu.length; i++) { %>
+      
+       <li> <%= data.menu[i].name %> <%= data.menu[i].price%> <%= data.menu[i].rating%>  </li>
+       
+
+      <% }%>  
+      </ol>
+
+</body>
+</html>
